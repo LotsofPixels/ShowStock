@@ -1,0 +1,19 @@
+<h2>Showstock</h2>
+<?php
+/** @var $block Magento\Framework\View\Element\Template */
+/** @var  $showStockviewmodel  LotsofPixels\Showstock\ViewModel\Showstock */
+
+$showStockviewmodel =$block->getData('showstock-viewmodel');
+if ($showStockviewmodel->getProducttype() == 'simple') {
+    echo __('Stock') . ': ' . $showStockviewmodel->getPdpstock();
+}
+if ($showStockviewmodel->getProducttype() == 'configurable') {
+    $childs = $showStockviewmodel->getChildstock();
+    foreach ($childs as $child) {
+        echo $child;
+    }
+}
+
+
+
+

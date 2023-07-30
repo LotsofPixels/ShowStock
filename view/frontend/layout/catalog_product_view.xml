@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="alert.urls">
+            <block name="showstock-block" class="Magento\Framework\View\Element\Template" template="LotsofPixels_Showstock::showstock.phtml" cacheable="false">
+                <arguments>
+                 <argument name="showstock-viewmodel" xsi:type="object">LotsofPixels\Showstock\ViewModel\Showstock</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+    </body>
+</page>
